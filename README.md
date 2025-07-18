@@ -33,3 +33,14 @@ docker run -d \
 
 # Cassandra
 - Directly runned from docker hub in docker desktop
+
+# MariaDB
+```
+docker run --detach --name some-mariadb \
+  -p 3306:3306 \
+  --env MARIADB_USER=example-user \
+  --env MARIADB_PASSWORD=my_cool_secret \
+  --env MARIADB_DATABASE=example-database \
+  --env MARIADB_ROOT_PASSWORD=my-secret-pw \
+  mariadb:latest
+```
