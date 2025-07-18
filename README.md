@@ -20,21 +20,21 @@ docker run -d \
   -p 15672:15672 \
   rabbitmq:3-management
 ```
-# Vault
+# Vault (official)
 - Directly runned from docker hub in docker desktop
 - keys were displayed in the logs of the container
 
-# Click House
+# Click House (official)
 - Directly runned from docker hub in docker desktop
 - default username & password is admin
 
-# ActiveMQ
+# ActiveMQ (rmohr/activemq:latest)
 - Directly runned from docker hub in docker desktop
 
-# Cassandra
+# Cassandra (official)
 - Directly runned from docker hub in docker desktop
 
-# Elasticsearch
+# Elasticsearch (official)
 - Directly runned from docker hub in docker desktop
 
 # MariaDB
