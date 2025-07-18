@@ -47,3 +47,14 @@ docker run --detach --name some-mariadb \
   --env MARIADB_ROOT_PASSWORD=rootpassword \
   mariadb:latest
 ```
+# Opensearch
+```
+docker run -d \
+  --name opensearch \
+  -p 9200:9200 \
+  -p 9600:9600 \
+  -e "discovery.type=single-node" \
+  -e "OPENSEARCH_JAVA_OPTS=-Xms1g -Xmx1g" \
+  -e "OPENSEARCH_INITIAL_ADMIN_PASSWORD=S3cure@Password123!" \
+  opensearchproject/opensearch:3.1.0
+```
