@@ -25,3 +25,8 @@ docker run -d \
 - Directly runned from docker hub in docker desktop
 - keys were displayed in the logs of the container
 ```
+# Click House
+- Directly runned from docker hub in docker desktop
+
+# ActiveMQ
+- Directly runned from docker hub in docker desktop
