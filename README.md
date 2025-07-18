@@ -30,3 +30,6 @@ docker run -d \
 
 # ActiveMQ
 - Directly runned from docker hub in docker desktop
+
+# Cassandra
+- Directly runned from docker hub in docker desktop
