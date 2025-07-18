@@ -35,6 +35,9 @@ docker run -d \
 # Cassandra
 - Directly runned from docker hub in docker desktop
 
+# Elasticsearch
+- Directly runned from docker hub in docker desktop
+
 # MariaDB
 ```
 docker run --detach --name some-mariadb \
