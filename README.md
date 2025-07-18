@@ -27,6 +27,7 @@ docker run -d \
 ```
 # Click House
 - Directly runned from docker hub in docker desktop
+- default username & password is admin
 
 # ActiveMQ
 - Directly runned from docker hub in docker desktop
