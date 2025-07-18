@@ -20,3 +20,8 @@ docker run -d \
   -p 15672:15672 \
   rabbitmq:3-management
 ```
+# Vault
+```
+- Directly runned from docker hub in docker desktop
+- keys were displayed in the logs of the container
+```
