@@ -39,8 +39,8 @@ docker run -d \
 docker run --detach --name some-mariadb \
   -p 3306:3306 \
   --env MARIADB_USER=example-user \
-  --env MARIADB_PASSWORD=my_cool_secret \
-  --env MARIADB_DATABASE=example-database \
-  --env MARIADB_ROOT_PASSWORD=my-secret-pw \
+  --env MARIADB_PASSWORD=password \
+  --env MARIADB_DATABASE=database \
+  --env MARIADB_ROOT_PASSWORD=rootpassword \
   mariadb:latest
 ```
