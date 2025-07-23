@@ -48,13 +48,32 @@ docker run --detach --name some-mariadb \
   mariadb:latest
 ```
 # Opensearch
+- using docker compose
 ```
-docker run -d \
-  --name opensearch \
-  -p 9200:9200 \
-  -p 9600:9600 \
-  -e "discovery.type=single-node" \
-  -e "OPENSEARCH_JAVA_OPTS=-Xms1g -Xmx1g" \
-  -e "OPENSEARCH_INITIAL_ADMIN_PASSWORD=S3cure@Password123!" \
-  opensearchproject/opensearch:3.1.0
+version: '3'
+services:
+  opensearch:
+    image: opensearchproject/opensearch:2.14.0
+    container_name: opensearch
+    environment:
+      - discovery.type=single-node
+      - plugins.security.disabled=true
+      - OPENSEARCH_JAVA_OPTS=-Xms512m -Xmx512m
+      - OPENSEARCH_INITIAL_ADMIN_PASSWORD=Shyam@184239!
+    ports:
+      - "9200:9200"
+    volumes:
+      - opensearch-data:/usr/share/opensearch/data
+
+  dashboards:
+    image: opensearchproject/opensearch-dashboards:2.14.0
+    container_name: dashboards
+    ports:
+      - "5601:5601"
+    environment:
+      - OPENSEARCH_HOSTS=["http://opensearch:9200"]
+      - DISABLE_SECURITY_DASHBOARDS_PLUGIN=true
+
+volumes:
+  opensearch-data:
 ```
