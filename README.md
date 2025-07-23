@@ -77,3 +77,24 @@ services:
 volumes:
   opensearch-data:
 ```
+- using docker run
+```
+docker run -d \
+  --name opensearch \
+  -p 9200:9200 \
+  -e "discovery.type=single-node" \
+  -e "plugins.security.disabled=true" \
+  -e "OPENSEARCH_JAVA_OPTS=-Xms512m -Xmx512m" \
+  -e "OPENSEARCH_INITIAL_ADMIN_PASSWORD=Shyam@184239!" \
+  opensearchproject/opensearch:2.14.0
+```
+# Optional for Dashboard
+```
+docker run -d \
+  --name dashboards \
+  --link opensearch \
+  -p 5601:5601 \
+  -e "OPENSEARCH_HOSTS=[\"http://opensearch:9200\"]" \
+  -e "DISABLE_SECURITY_DASHBOARDS_PLUGIN=true" \
+  opensearchproject/opensearch-dashboards:2.14.0
+```
