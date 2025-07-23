@@ -88,7 +88,7 @@ docker run -d \
   -e "OPENSEARCH_INITIAL_ADMIN_PASSWORD=Shyam@184239!" \
   opensearchproject/opensearch:2.14.0
 ```
-# Optional for Dashboard
+- Optional for OpenSearch Dashboard
 ```
 docker run -d \
   --name dashboards \
